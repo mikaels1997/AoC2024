@@ -4,8 +4,7 @@ class Mem:
 
 def solve(path, sec):
     data = [*map(int, open(path).read().strip())]
-    mems = []
-    pos = 0
+    mems, pos = [], 0
     for i in range(len(data)):
         if i % 2 == 0 and not sec:
             mems.extend([Mem(i//2, pos+j, 1) for j in range(data[i])])
