@@ -10,4 +10,5 @@ def blink(val, d, sec):
         return blink((2024*val if val != 0 else 1), d+1, sec)
 
 vals = [*map(int, open("data/input11.txt").read().split())]
-print(((sum(blink(x, 0, False) for x in vals)), (sum(blink(x, 0, True) for x in vals))))
+print(((sum(blink(x, 0, False) for x in vals)), 
+       (sum(blink(x, 0, True) for x in vals))))
